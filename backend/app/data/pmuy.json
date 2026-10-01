@@ -1,0 +1,30 @@
+{
+  "scheme_id": "pmuy",
+  "scheme_name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+  "scheme_name_ta": "பிரதான் மந்திரி உஜ்வலா திட்டம்",
+  "description": "A central government scheme to help women from poor households get a LPG cooking gas connection.",
+  "description_ta": "ஏழைக் குடும்பப் பெண்களுக்கு சமையல் எரிவாயு (LPG) இணைப்பு பெற உதவும் மத்திய அரசுத் திட்டம்.",
+  "official_url": "https://www.pmuy.gov.in/",
+  "source_url": "https://www.pmuy.gov.in/",
+  "last_verified": "NEEDS_REVIEW: confirm against pmuy.gov.in before the demo",
+  "scheme_version": "0.1.0",
+  "eligibility_rules": [
+    {"id": "adult", "field": "age", "op": "gte", "value": 18, "label_en": "Aged 18 or above", "label_ta": "18 வயது அல்லது அதற்கு மேல்"},
+    {"id": "woman", "field": "gender", "op": "eq", "value": "female", "label_en": "Woman applicant", "label_ta": "பெண் விண்ணப்பதாரர்"},
+    {"id": "no_lpg", "field": "household_lpg_status", "op": "eq", "value": "none", "label_en": "No LPG connection in the household", "label_ta": "வீட்டில் LPG இணைப்பு இல்லை"},
+    {"id": "poor_household", "field": "poor_household_status", "op": "eq", "value": "declared", "verify_values": ["unsure"], "label_en": "Belongs to a poor household", "label_ta": "ஏழைக் குடும்பத்தைச் சேர்ந்தவர்"}
+  ],
+  "required_documents": [
+    {"id": "aadhaar", "name_en": "Aadhaar card", "name_ta": "ஆதார் அட்டை", "why_en": "To verify your identity (KYC).", "why_ta": "உங்கள் அடையாளத்தை உறுதிசெய்ய (KYC)."},
+    {"id": "family_doc", "name_en": "Ration card or state family document", "name_ta": "ரேஷன் அட்டை அல்லது மாநில குடும்ப ஆவணம்", "why_en": "To show your household details.", "why_ta": "உங்கள் குடும்ப விவரங்களைக் காட்ட."},
+    {"id": "bank", "name_en": "Bank account details", "name_ta": "வங்கிக் கணக்கு விவரங்கள்", "why_en": "To link your connection to your bank account.", "why_ta": "இணைப்பை உங்கள் வங்கிக் கணக்குடன் இணைக்க."}
+  ],
+  "application_steps": [
+    {"id": "prepare", "kind": "demo", "title_en": "Keep your documents ready", "title_ta": "ஆவணங்களை தயாராக வைத்திருங்கள்"},
+    {"id": "route", "kind": "official", "title_en": "Choose the official application route or LPG distributor on pmuy.gov.in", "title_ta": "pmuy.gov.in இல் அதிகாரப்பூர்வ விண்ணப்ப வழி அல்லது LPG விநியோகஸ்தரைத் தேர்ந்தெடுங்கள்"},
+    {"id": "kyc", "kind": "official", "title_en": "Complete KYC through the official process", "title_ta": "அதிகாரப்பூர்வ நடைமுறையில் KYC முடிக்கவும்"},
+    {"id": "submit", "kind": "official", "title_en": "Submit through the official process", "title_ta": "அதிகாரப்பூர்வ நடைமுறையில் சமர்ப்பிக்கவும்"},
+    {"id": "ack", "kind": "official", "title_en": "Keep your acknowledgement or reference number", "title_ta": "ஒப்புகை அல்லது குறிப்பு எண்ணை பத்திரமாக வைத்திருங்கள்"},
+    {"id": "track", "kind": "official", "title_en": "Track progress through the official channel", "title_ta": "அதிகாரப்பூர்வ வழியில் நிலையைப் பாருங்கள்"}
+  ]
+}
